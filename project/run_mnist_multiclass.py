@@ -20,8 +20,13 @@ H, W = 28, 28
 
 def RParam(*shape):
     r = 0.1 * (minitorch.rand(shape, backend=BACKEND) - 0.5)
+    # print(f"RParam shape: {shape}, RParam value: {r}")
     return minitorch.Parameter(r)
 
+def log_message(message, file_name="mnist_log.txt"):
+    with open(file_name, "a") as file:  # Open the file in append mode
+        file.write(message + "\n")  # Write the message to the file
+    print(message)  # Print the message to the console
 
 class Linear(minitorch.Module):
     def __init__(self, in_size, out_size):
@@ -44,35 +49,9 @@ class Conv2d(minitorch.Module):
         self.bias = RParam(out_channels, 1, 1)
 
     def forward(self, input):
-        # DONE: Implement for Task 4.5.
-        weights = self.weights()
-        bias = self.bias()
-        _, in_channels, _, _ = self.weights().shape  # Get in_channels from weights
-
-        # Determine output dimensions
-        batch_size, _, height, width = input.shape
-        out_channels, _, kh, kw = weights.shape
-        output_height = height - kh + 1
-        output_width = width - kw + 1
-
-        # Create output tensor
-        output = Tensor.zeros((batch_size, out_channels, output_height, output_width))
-
-        # Perform convolution
-        for i in range(batch_size):
-            for j in range(out_channels):
-                for h in range(output_height):
-                    for w in range(output_width):
-                        for c in range(in_channels):
-                            output[i, j, h, w] += \
-                                (input[i, c, h:h+kh, w:w+kw] * weights[j, c]).sum()
-
-        # Add bias to each output channel
-        for j in range(out_channels):
-            output[:, j, :, :] += bias[j]
-
+        output = minitorch.conv2d(input, self.weights.value) + self.bias.value
+        # print(f"Conv2d output shape: {output.shape}")
         return output
-
 
 class Network(minitorch.Module):
     """
@@ -89,54 +68,28 @@ class Network(minitorch.Module):
     7. Apply a logsoftmax over the class dimension.
     """
 
-    def __init__(self, in_channels, num_classes):
+    def __init__(self):
         super().__init__()
 
         # For vis
         self.mid = None
         self.out = None
 
-        # DONE: Implement for Task 4.5.
-        self.conv1 = Conv2d(in_channels, 4, 3, 3)  # 4 output channels, 3x3 kernel
-        self.conv2 = Conv2d(4, 8, 3, 3)           # 8 output channels, 3x3 kernel
-
-        # ReLU activations
-        self.relu = ReLU()
-
-        # Pooling layer
-        self.pool = maxpool2d(kernel=(4, 4))  # Replace with AvgPool2d if needed
-
-        # Linear layers
-        self.fc1 = Linear(392, 64)  # Flatten to size 392, then linear to size 64
-        self.fc2 = Linear(64, num_classes)  # Linear to number of classes
-
-        # Dropout
-        self.dropout = dropout(rate=0.25)
+        self.conv1 = Conv2d(1, 4, 3, 3)
+        self.conv2 = Conv2d(4, 8, 3, 3)
+        self.layer1 = Linear(392, 64)
+        self.layer2 = Linear(64, 10)
 
     def forward(self, x):
-        # DONE: Implement for Task 4.5.
-        # Step 1: First Convolution and ReLU
-        self.mid = self.relu(self.conv1(x))
-
-        # Step 2: Second Convolution and ReLU
-        self.out = self.relu(self.conv2(self.mid))
-
-        # Step 3: Pooling
-        x = self.pool(self.out)
-
-        # Step 4: Flatten
-        x = x.view(x.shape[0], -1)  # Flatten the tensor while keeping the batch dimension
-
-        # Step 5: Linear, ReLU, and Dropout
-        x = self.dropout(self.relu(self.fc1(x)))
-
-        # Step 6: Second Linear layer
-        x = self.fc2(x)
-
-        # Step 7: Logsoftmax
-        x = logsoftmax(x, dim=1)
-
-        return x
+        # TODO: Implement for Task 4.5.
+        self.mid = self.conv1.forward(x).relu()
+        self.out = self.conv2.forward(self.mid).relu()
+        l = self.layer1.forward(
+            minitorch.avgpool2d(self.out, (4, 4)).view(BATCH, 392)
+        ).relu()
+        if self.training:
+            l = minitorch.dropout(l, 0.25)
+        return minitorch.logsoftmax(self.layer2.forward(l), dim=1)
 
 
 def make_mnist(start, stop):
@@ -152,7 +105,7 @@ def make_mnist(start, stop):
 
 
 def default_log_fn(epoch, total_loss, correct, total, losses, model):
-    print(f"Epoch {epoch} loss {total_loss} valid acc {correct}/{total}")
+    log_message(f"Epoch {epoch} loss {total_loss} valid acc {correct}/{total}")
 
 
 class ImageTrain:
@@ -163,7 +116,7 @@ class ImageTrain:
         return self.model.forward(minitorch.tensor([x], backend=BACKEND))
 
     def train(
-        self, data_train, data_val, learning_rate, max_epochs=500, log_fn=default_log_fn
+        self, data_train, data_val, learning_rate, max_epochs=25, log_fn=default_log_fn
     ):
         (X_train, y_train) = data_train
         (X_val, y_val) = data_val
@@ -203,6 +156,7 @@ class ImageTrain:
 
                 # Update
                 optim.step()
+                optim.zero_grad()
 
                 if batch_num % 5 == 0:
                     model.eval()
@@ -229,8 +183,10 @@ class ImageTrain:
                             if y[i, ind] == 1.0:
                                 correct += 1
                     log_fn(epoch, total_loss, correct, BATCH, losses, model)
+                    log_message(f"Epoch {epoch}, Batch {batch_num}, Loss: {total_loss}, Accuracy: {correct / BATCH}")
 
                     total_loss = 0.0
+                    
                     model.train()
 
 

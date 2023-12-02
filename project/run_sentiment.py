@@ -37,34 +37,7 @@ class Conv1d(minitorch.Module):
         self.bias = RParam(1, out_channels, 1)
 
     def forward(self, input):
-        # DONE: Implement for Task 4.5.
-        weights = self.weights()
-        bias = self.bias()
-        _, in_channels, _, _ = self.weights().shape  # Get in_channels from weights
-
-        # Determine the output dimensions
-        batch_size, _, input_width = input.shape
-        out_channels, _, kernel_width = weights.shape
-        output_width = input_width - kernel_width + 1
-
-        # Create output tensor
-        output = Tensor.zeros((batch_size, out_channels, output_width))
-
-        # Perform the convolution
-        for i in range(batch_size):
-            for j in range(out_channels):
-                for w in range(output_width):
-                    for c in range(in_channels):
-                        output[i, j, w] += \
-                            (input[i, c, w:w+kernel_width] * weights[j, c]).sum()
-
-        # Add bias to each output channel
-        for j in range(out_channels):
-            output[:, j, :] += bias[0, j, 0]
-
-        return output
-
-        raise NotImplementedError("Need to implement for Task 4.5")
+        return minitorch.conv1d(input, self.weights.value) + self.bias.value
 
 
 class CNNSentimentKim(minitorch.Module):
@@ -87,49 +60,30 @@ class CNNSentimentKim(minitorch.Module):
         embedding_size=50,
         filter_sizes=[3, 4, 5],
         dropout=0.25,
-        num_classes=2,
     ):
         super().__init__()
         self.feature_map_size = feature_map_size
-        # DONE: Implement for Task 4.5.
-        # Convolution layers
-        self.convs = minitorch.ModuleList([
-            Conv1d(embedding_size, feature_map_size, k) for k in filter_sizes
-        ])
-
-        # Linear layer
-        self.fc = Linear(feature_map_size * len(filter_sizes), num_classes)
-
-        # ReLU and Dropout
-        self.relu = ReLU()
-        self.dropout = dropout(dropout)
-
-        # Sigmoid activation
-        self.sigmoid = Sigmoid()
-
+        self.conv1 = Conv1d(embedding_size, feature_map_size, filter_sizes[0])
+        self.conv2 = Conv1d(embedding_size, feature_map_size, filter_sizes[1])
+        self.conv3 = Conv1d(embedding_size, feature_map_size, filter_sizes[2])
+        self.final = Linear(feature_map_size, 1)
+        self.dropout = dropout
 
     def forward(self, embeddings):
         """
         embeddings tensor: [batch x sentence length x embedding dim]
         """
-        # DONE: Implement for Task 4.5.
-        # Apply convolutions and ReLU
-        conv_outputs = [self.relu(conv(embeddings)) for conv in self.convs]
+        embeddings = embeddings.permute(0, 2, 1)
 
-        # Max-over-time pooling
-        pooled_outputs = [torch.max(conv, dim=2)[0] for conv in conv_outputs]
-
-        # Concatenate the pooled outputs
-        cat = torch.cat(pooled_outputs, dim=1)
-
-        # Linear layer, ReLU, and Dropout
-        out = self.dropout(self.relu(self.fc(cat)))
-
-        # Sigmoid activation
-        result = self.sigmoid(out)
-
-
-        return result
+        x1 = self.conv1.forward(embeddings).relu()
+        x2 = self.conv2.forward(embeddings).relu()
+        x3 = self.conv3.forward(embeddings).relu()
+        x_mid = (
+            minitorch.nn.max(x1, 2) + minitorch.nn.max(x2, 2) + minitorch.nn.max(x3, 2)
+        )
+        x = self.final(x_mid.view(x_mid.shape[0], x_mid.shape[1]))
+        x = minitorch.nn.dropout(x, self.dropout)
+        return x.sigmoid().view(embeddings.shape[0])
 
 
 # Evaluation helper methods

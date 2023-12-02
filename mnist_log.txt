@@ -1,0 +1,204 @@
+Epoch 1 loss 2.306421875312209 valid acc 2/16
+Epoch 1, Batch 0, Loss: 2.306421875312209, Accuracy: 0.125
+Epoch 1 loss 11.481546791387334 valid acc 2/16
+Epoch 1, Batch 5, Loss: 11.481546791387334, Accuracy: 0.125
+Epoch 1 loss 11.503435095588213 valid acc 2/16
+Epoch 1, Batch 10, Loss: 11.503435095588213, Accuracy: 0.125
+Epoch 1 loss 11.505799711705588 valid acc 3/16
+Epoch 1, Batch 15, Loss: 11.505799711705588, Accuracy: 0.1875
+Epoch 1 loss 11.456715965929508 valid acc 3/16
+Epoch 1, Batch 20, Loss: 11.456715965929508, Accuracy: 0.1875
+Epoch 1 loss 11.419465924669879 valid acc 4/16
+Epoch 1, Batch 25, Loss: 11.419465924669879, Accuracy: 0.25
+Epoch 1 loss 11.361245953089437 valid acc 4/16
+Epoch 1, Batch 30, Loss: 11.361245953089437, Accuracy: 0.25
+Epoch 1 loss 11.429163199580806 valid acc 4/16
+Epoch 1, Batch 35, Loss: 11.429163199580806, Accuracy: 0.25
+Epoch 1 loss 11.35334664298632 valid acc 4/16
+Epoch 1, Batch 40, Loss: 11.35334664298632, Accuracy: 0.25
+Epoch 1 loss 11.250784267513009 valid acc 5/16
+Epoch 1, Batch 45, Loss: 11.250784267513009, Accuracy: 0.3125
+Epoch 1 loss 11.230339558111606 valid acc 6/16
+Epoch 1, Batch 50, Loss: 11.230339558111606, Accuracy: 0.375
+Epoch 1 loss 10.900181918895143 valid acc 6/16
+Epoch 1, Batch 55, Loss: 10.900181918895143, Accuracy: 0.375
+Epoch 1 loss 10.756071839092504 valid acc 5/16
+Epoch 1, Batch 60, Loss: 10.756071839092504, Accuracy: 0.3125
+Epoch 1 loss 10.405954110993555 valid acc 6/16
+Epoch 1, Batch 65, Loss: 10.405954110993555, Accuracy: 0.375
+Epoch 1 loss 10.343198779278273 valid acc 7/16
+Epoch 1, Batch 70, Loss: 10.343198779278273, Accuracy: 0.4375
+Epoch 1 loss 9.568923333209316 valid acc 9/16
+Epoch 1, Batch 75, Loss: 9.568923333209316, Accuracy: 0.5625
+Epoch 1 loss 10.035479505196225 valid acc 10/16
+Epoch 1, Batch 80, Loss: 10.035479505196225, Accuracy: 0.625
+Epoch 1 loss 9.175512515316163 valid acc 11/16
+Epoch 1, Batch 85, Loss: 9.175512515316163, Accuracy: 0.6875
+Epoch 1 loss 8.79389526727627 valid acc 11/16
+Epoch 1, Batch 90, Loss: 8.79389526727627, Accuracy: 0.6875
+Epoch 1 loss 8.65295412352845 valid acc 12/16
+Epoch 1, Batch 95, Loss: 8.65295412352845, Accuracy: 0.75
+Epoch 1 loss 8.660085353794123 valid acc 12/16
+Epoch 1, Batch 100, Loss: 8.660085353794123, Accuracy: 0.75
+Epoch 1 loss 7.276929689599685 valid acc 12/16
+Epoch 1, Batch 105, Loss: 7.276929689599685, Accuracy: 0.75
+Epoch 1 loss 6.177558160262951 valid acc 12/16
+Epoch 1, Batch 110, Loss: 6.177558160262951, Accuracy: 0.75
+Epoch 1 loss 6.946448810365365 valid acc 13/16
+Epoch 1, Batch 115, Loss: 6.946448810365365, Accuracy: 0.8125
+Epoch 1 loss 6.354443091068899 valid acc 12/16
+Epoch 1, Batch 120, Loss: 6.354443091068899, Accuracy: 0.75
+Epoch 1 loss 6.966480578092304 valid acc 13/16
+Epoch 1, Batch 125, Loss: 6.966480578092304, Accuracy: 0.8125
+Epoch 1 loss 6.852237596679485 valid acc 11/16
+Epoch 1, Batch 130, Loss: 6.852237596679485, Accuracy: 0.6875
+Epoch 1 loss 5.0771930598466355 valid acc 12/16
+Epoch 1, Batch 135, Loss: 5.0771930598466355, Accuracy: 0.75
+Epoch 1 loss 5.674221561501927 valid acc 13/16
+Epoch 1, Batch 140, Loss: 5.674221561501927, Accuracy: 0.8125
+Epoch 1 loss 5.470634879040114 valid acc 12/16
+Epoch 1, Batch 145, Loss: 5.470634879040114, Accuracy: 0.75
+Epoch 1 loss 7.1117856369092864 valid acc 13/16
+Epoch 1, Batch 150, Loss: 7.1117856369092864, Accuracy: 0.8125
+Epoch 1 loss 6.443431692115254 valid acc 12/16
+Epoch 1, Batch 155, Loss: 6.443431692115254, Accuracy: 0.75
+Epoch 1 loss 6.504554853951874 valid acc 13/16
+Epoch 1, Batch 160, Loss: 6.504554853951874, Accuracy: 0.8125
+Epoch 1 loss 6.35251036343575 valid acc 14/16
+Epoch 1, Batch 165, Loss: 6.35251036343575, Accuracy: 0.875
+Epoch 1 loss 7.716556504994006 valid acc 14/16
+Epoch 1, Batch 170, Loss: 7.716556504994006, Accuracy: 0.875
+Epoch 1 loss 6.0647064131322175 valid acc 11/16
+Epoch 1, Batch 175, Loss: 6.0647064131322175, Accuracy: 0.6875
+Epoch 1 loss 3.5050246639639457 valid acc 13/16
+Epoch 1, Batch 180, Loss: 3.5050246639639457, Accuracy: 0.8125
+Epoch 1 loss 4.8978873286509685 valid acc 12/16
+Epoch 1, Batch 185, Loss: 4.8978873286509685, Accuracy: 0.75
+Epoch 1 loss 4.806507110723176 valid acc 14/16
+Epoch 1, Batch 190, Loss: 4.806507110723176, Accuracy: 0.875
+Epoch 1 loss 5.887147635551841 valid acc 12/16
+Epoch 1, Batch 195, Loss: 5.887147635551841, Accuracy: 0.75
+Epoch 1 loss 5.004419387826594 valid acc 14/16
+Epoch 1, Batch 200, Loss: 5.004419387826594, Accuracy: 0.875
+Epoch 1 loss 5.358006847909075 valid acc 14/16
+Epoch 1, Batch 205, Loss: 5.358006847909075, Accuracy: 0.875
+Epoch 1 loss 5.5915902899119585 valid acc 14/16
+Epoch 1, Batch 210, Loss: 5.5915902899119585, Accuracy: 0.875
+Epoch 1 loss 5.330231246242482 valid acc 14/16
+Epoch 1, Batch 215, Loss: 5.330231246242482, Accuracy: 0.875
+Epoch 1 loss 5.757789942002635 valid acc 14/16
+Epoch 1, Batch 220, Loss: 5.757789942002635, Accuracy: 0.875
+Epoch 1 loss 5.840740228867675 valid acc 14/16
+Epoch 1, Batch 225, Loss: 5.840740228867675, Accuracy: 0.875
+Epoch 1 loss 5.9160291543412225 valid acc 14/16
+Epoch 1, Batch 230, Loss: 5.9160291543412225, Accuracy: 0.875
+Epoch 1 loss 4.923414271056082 valid acc 13/16
+Epoch 1, Batch 235, Loss: 4.923414271056082, Accuracy: 0.8125
+Epoch 1 loss 5.3536729346701675 valid acc 15/16
+Epoch 1, Batch 240, Loss: 5.3536729346701675, Accuracy: 0.9375
+Epoch 1 loss 4.505890503035141 valid acc 14/16
+Epoch 1, Batch 245, Loss: 4.505890503035141, Accuracy: 0.875
+Epoch 1 loss 4.768501036869738 valid acc 12/16
+Epoch 1, Batch 250, Loss: 4.768501036869738, Accuracy: 0.75
+Epoch 1 loss 4.24795604734873 valid acc 13/16
+Epoch 1, Batch 255, Loss: 4.24795604734873, Accuracy: 0.8125
+Epoch 1 loss 4.78909096935731 valid acc 15/16
+Epoch 1, Batch 260, Loss: 4.78909096935731, Accuracy: 0.9375
+Epoch 1 loss 5.126131385422586 valid acc 14/16
+Epoch 1, Batch 265, Loss: 5.126131385422586, Accuracy: 0.875
+Epoch 1 loss 6.07613384198509 valid acc 15/16
+Epoch 1, Batch 270, Loss: 6.07613384198509, Accuracy: 0.9375
+Epoch 1 loss 5.362627003444563 valid acc 14/16
+Epoch 1, Batch 275, Loss: 5.362627003444563, Accuracy: 0.875
+Epoch 1 loss 5.2659500794426854 valid acc 13/16
+Epoch 1, Batch 280, Loss: 5.2659500794426854, Accuracy: 0.8125
+Epoch 1 loss 5.396560751036017 valid acc 12/16
+Epoch 1, Batch 285, Loss: 5.396560751036017, Accuracy: 0.75
+Epoch 1 loss 5.250932387182674 valid acc 11/16
+Epoch 1, Batch 290, Loss: 5.250932387182674, Accuracy: 0.6875
+Epoch 1 loss 7.293492018887624 valid acc 13/16
+Epoch 1, Batch 295, Loss: 7.293492018887624, Accuracy: 0.8125
+Epoch 1 loss 7.639372680325884 valid acc 11/16
+Epoch 1, Batch 300, Loss: 7.639372680325884, Accuracy: 0.6875
+Epoch 1 loss 6.900305412132939 valid acc 14/16
+Epoch 1, Batch 305, Loss: 6.900305412132939, Accuracy: 0.875
+Epoch 1 loss 5.412928784330865 valid acc 13/16
+Epoch 1, Batch 310, Loss: 5.412928784330865, Accuracy: 0.8125
+Epoch 2 loss 0.9935732657400914 valid acc 14/16
+Epoch 2, Batch 0, Loss: 0.9935732657400914, Accuracy: 0.875
+Epoch 2 loss 5.018545016057244 valid acc 13/16
+Epoch 2, Batch 5, Loss: 5.018545016057244, Accuracy: 0.8125
+Epoch 2 loss 6.060480518188139 valid acc 13/16
+Epoch 2, Batch 10, Loss: 6.060480518188139, Accuracy: 0.8125
+Epoch 2 loss 6.231644100726539 valid acc 10/16
+Epoch 2, Batch 15, Loss: 6.231644100726539, Accuracy: 0.625
+Epoch 2 loss 5.53391328968744 valid acc 11/16
+Epoch 2, Batch 20, Loss: 5.53391328968744, Accuracy: 0.6875
+Epoch 2 loss 5.059866389549447 valid acc 13/16
+Epoch 2, Batch 25, Loss: 5.059866389549447, Accuracy: 0.8125
+Epoch 2 loss 4.779749559736285 valid acc 11/16
+Epoch 2, Batch 30, Loss: 4.779749559736285, Accuracy: 0.6875
+Epoch 2 loss 5.857676938766897 valid acc 11/16
+Epoch 2, Batch 35, Loss: 5.857676938766897, Accuracy: 0.6875
+Epoch 2 loss 6.842812287839614 valid acc 12/16
+Epoch 2, Batch 40, Loss: 6.842812287839614, Accuracy: 0.75
+Epoch 2 loss 5.375973001879789 valid acc 12/16
+Epoch 2, Batch 45, Loss: 5.375973001879789, Accuracy: 0.75
+Epoch 2 loss 4.9127683413660295 valid acc 13/16
+Epoch 2, Batch 50, Loss: 4.9127683413660295, Accuracy: 0.8125
+Epoch 2 loss 5.418328552458475 valid acc 13/16
+Epoch 2, Batch 55, Loss: 5.418328552458475, Accuracy: 0.8125
+Epoch 2 loss 5.413542370224279 valid acc 13/16
+Epoch 2, Batch 60, Loss: 5.413542370224279, Accuracy: 0.8125
+Epoch 2 loss 4.821843399945876 valid acc 13/16
+Epoch 2, Batch 65, Loss: 4.821843399945876, Accuracy: 0.8125
+Epoch 2 loss 5.243672905938655 valid acc 13/16
+Epoch 2, Batch 70, Loss: 5.243672905938655, Accuracy: 0.8125
+Epoch 2 loss 4.445781870503767 valid acc 12/16
+Epoch 2, Batch 75, Loss: 4.445781870503767, Accuracy: 0.75
+Epoch 2 loss 6.063032743397078 valid acc 12/16
+Epoch 2, Batch 80, Loss: 6.063032743397078, Accuracy: 0.75
+Epoch 2 loss 5.585547063746662 valid acc 13/16
+Epoch 2, Batch 85, Loss: 5.585547063746662, Accuracy: 0.8125
+Epoch 2 loss 4.306300737669313 valid acc 13/16
+Epoch 2, Batch 90, Loss: 4.306300737669313, Accuracy: 0.8125
+Epoch 2 loss 3.7561633185039462 valid acc 13/16
+Epoch 2, Batch 95, Loss: 3.7561633185039462, Accuracy: 0.8125
+Epoch 2 loss 3.0379620883143965 valid acc 13/16
+Epoch 2, Batch 100, Loss: 3.0379620883143965, Accuracy: 0.8125
+Epoch 2 loss 2.8655167184240447 valid acc 13/16
+Epoch 2, Batch 105, Loss: 2.8655167184240447, Accuracy: 0.8125
+Epoch 2 loss 1.993491459465858 valid acc 14/16
+Epoch 2, Batch 110, Loss: 1.993491459465858, Accuracy: 0.875
+Epoch 2 loss 3.761728828120925 valid acc 13/16
+Epoch 2, Batch 115, Loss: 3.761728828120925, Accuracy: 0.8125
+Epoch 2 loss 3.0276052059093743 valid acc 13/16
+Epoch 2, Batch 120, Loss: 3.0276052059093743, Accuracy: 0.8125
+Epoch 2 loss 3.055722162043132 valid acc 14/16
+Epoch 2, Batch 125, Loss: 3.055722162043132, Accuracy: 0.875
+Epoch 2 loss 3.2039215444304805 valid acc 14/16
+Epoch 2, Batch 130, Loss: 3.2039215444304805, Accuracy: 0.875
+Epoch 2 loss 2.7584937172968127 valid acc 14/16
+Epoch 2, Batch 135, Loss: 2.7584937172968127, Accuracy: 0.875
+Epoch 2 loss 2.488134298382508 valid acc 12/16
+Epoch 2, Batch 140, Loss: 2.488134298382508, Accuracy: 0.75
+Epoch 2 loss 2.1031081971964705 valid acc 12/16
+Epoch 2, Batch 145, Loss: 2.1031081971964705, Accuracy: 0.75
+Epoch 2 loss 3.548714097042876 valid acc 12/16
+Epoch 2, Batch 150, Loss: 3.548714097042876, Accuracy: 0.75
+Epoch 2 loss 2.9956478585369646 valid acc 12/16
+Epoch 2, Batch 155, Loss: 2.9956478585369646, Accuracy: 0.75
+Epoch 2 loss 2.1440721480766256 valid acc 12/16
+Epoch 2, Batch 160, Loss: 2.1440721480766256, Accuracy: 0.75
+Epoch 2 loss 2.2570174259785674 valid acc 13/16
+Epoch 2, Batch 165, Loss: 2.2570174259785674, Accuracy: 0.8125
+Epoch 2 loss 3.583440649973966 valid acc 14/16
+Epoch 2, Batch 170, Loss: 3.583440649973966, Accuracy: 0.875
+Epoch 2 loss 3.287053953453849 valid acc 14/16
+Epoch 2, Batch 175, Loss: 3.287053953453849, Accuracy: 0.875
+Epoch 2 loss 2.2072447311739234 valid acc 15/16
+Epoch 2, Batch 180, Loss: 2.2072447311739234, Accuracy: 0.9375
+Epoch 2 loss 2.5686576452062253 valid acc 15/16
+Epoch 2, Batch 185, Loss: 2.5686576452062253, Accuracy: 0.9375
+Epoch 2 loss 2.076375601014107 valid acc 15/16
+Epoch 2, Batch 190, Loss: 2.076375601014107, Accuracy: 0.9375
